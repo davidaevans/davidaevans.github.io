@@ -1,0 +1,26 @@
+body {
+	font-family: 'Inconsolata';
+}
+
+.navbar-brand {
+  /*width:150px;*/
+  font-size: 24px;
+  font-weight: 300;
+}
+.navbar-brand img {
+  height: 50px;
+  /* put value of image height as your need */
+  float: left;
+  margin-right: 7px;
+
+}
+
+/* Change the background colour of the Navbar */
+.bg-custom {
+	background-color: #fff;
+}
+
+.navbar {
+	font-weight: 300;
+	font-size: 24px;
+}

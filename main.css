@@ -1,12 +1,21 @@
 body {
 	font-family: 'Inconsolata';
+	font-size:18px;
 }
 
 .navbar-brand {
   /*width:150px;*/
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 300;
+  transition: font-weight 0.25s;
+  color:#868e96;
 }
+
+.navbar-brand:hover {
+	font-weight:600;
+	color:#343a40;
+}
+
 .navbar-brand img {
   height: 50px;
   /* put value of image height as your need */
@@ -23,4 +32,70 @@ body {
 .navbar {
 	font-weight: 300;
 	font-size: 24px;
+}
+
+.nav-link:hover {
+	font-weight: 600;
+	/*text-decoration: underline;
+	text-decoration-thickness: 3px;*/
+	border-bottom: 3px solid;
+	padding-bottom:3px;
+	color:#343a40;
+
+}
+
+.nav-link {
+	transition: font-weight 0.25s, border 0.25s, color 0.25s;
+	color:#868e96;
+}
+
+.nav-link i {
+	font-size: 20px;
+}
+
+.sidebar img {
+	width:150px;
+	height:150px;
+}
+
+
+.sidebar-name {
+	text-align: center;
+	font-weight: 400;
+	font-size: 28px;
+}
+
+.sidebar-bio {
+	font-size:18px;
+}
+
+.sidebar-links ul {
+	list-style-type: none;
+	margin-left:32px;
+	margin-top:20px;
+	padding-left:0;
+	font-size:20px;
+}
+
+.fa-li {
+	font-size: 20px;
+}
+
+.sidebar-link a{
+	color:#343a40;
+}
+
+.sidebar-link a:hover {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.sidebar-links li {
+	margin-top: 8px;
+}
+
+@media (min-width: 800px) {
+    .container{
+        max-width: 1200px;
+    }
 }

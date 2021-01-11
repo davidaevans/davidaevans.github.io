@@ -6,7 +6,7 @@
 
   <title>Test Post Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
@@ -16,9 +16,11 @@
 <body>
 	
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-custom">
+	<nav class="navbar navbar-expand-lg bg-custom">
 	<div class="container">
+
   <a class="navbar-brand" href="#"><img class="img-responsive" src="imgs/memoji.png"><span class="navbar-text"> David Evans</span></a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,6 +39,9 @@
       <li class="nav-item px-2">
         <a class="nav-link" href="#">Diary</a>
       </li>
+      <li class="nav-item px-2">
+        <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+      </li>
     </ul>
   </div>	
   </div>
@@ -52,12 +57,48 @@
 			Container for content
 		</div>
 		<div class="row">
-			<div class="col-md-2 d-none d-lg-block">
-				<div class="sticky-top p-5">
-				<p>In vitae odio id augue eornare a. Vivamus maximus maximus tortor ac sagittis. Nam et cursu.</p>
+			<div class="col-md-4 d-none d-lg-block">
+				<div class="sticky-top p-5 sidebar">
+					<div class="text-center mx-auto">
+						<img src="imgs/memoji.png">
+					</div>
+				
+				<div class="sidebar-name">David Evans</div>
+				<div class="sidebar-bio">PhD student at The University of Durham, UK</div>
+				<hr>
+				<div class="sidebar-links">
+					<ul class="fa-ul">
+						<li>
+							<span class="sidebar-icon"> <i class="fas fa-li fa-map-marker-alt"></i> </span>
+							<span class="sidebar-text">Durham, UK</span></li>
+
+						<li>
+							<span class="sidebar-icon"><i class="fab fa-li fa-github-square"></i></span>
+							<span class="sidebar-link"><a href="https://www.github.com">Github</a></span></li>
+						<li>
+							<span class="sidebar-icon"><i class="fab fa-li fa-twitter-square"></i></span>
+							<span class="sidebar-link"><a href="https://www.github.com">Twitter</a></span></li>
+						</li>
+						<li>
+							<span class="sidebar-icon"><i class="fab fa-li fa-linkedin"></i></span>
+							<span class="sidebar-link"><a href="https://www.github.com">LinkedIn</a></span></li>
+						</li>
+						<li>
+							<span class="sidebar-icon"><i class="fab fa-li fa-instagram-square"></i></span>
+							<span class="sidebar-link"><a href="https://www.github.com">Instagram</a></span></li>
+						</li>
+					</ul>
+			</div>	
 
 				</div>
 			</div>
+
+
+
+
+
+
+
 			<div class="col-md-8">
 				<h1>This is a Title for this Post</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo arcu. Fusce et aliquam tellus. Donec sem magna, eleifend ut massa in, rhoncus dignissim tortor. Pellentesque arcu metus, feugiat et varius vel, convallis at sapien. Pellentesque sagittis nisi enim, et gravida dui elementum ac. Ut vestibulum tellus leo, posuere iaculis enim venenatis sed. Suspendisse arcu diam, condimentum eu laoreet et, finibus consequat nulla. In hac habitasse platea dictumst. Aliquam eu risus auctor, porttitor nulla vitae, faucibus felis.</p>
@@ -79,9 +120,6 @@
 				<p>Vivamus semper est euismod quam gravida accumsan. Etiam pulvinar convallis turpis. Sed vel dui eget libero rhoncus hendrerit. Duis sit amet pellentesque libero. Duis vitae pulvinar dui. Nunc pretium mauris nisi, quis pulvinar mi bibendum ut. Suspendisse rutrum ex at nisi viverra, mattis mattis turpis condimentum. </p>
 
 				<p>Aenean non ultricies velit. Sed vitae blandit ligula. Donec sed interdum lorem. Nulla tincidunt iaculis lectus ut pharetra. Integer vitae suscipit libero, ac tempus nulla. Nulla eget malesuada nulla. Nullam dolor dolor, lobortis et dignissim id, ultricies id elit.</p>
-			</div>
-			<div class="col-md-2 d-none d-md-block">
-				<p>, ut venenatis arcu. Aenean tempus tristique dui, sit amet maximus dui sagittis ut. Aliquam aliquam blandit magna, eget laoreet tellus dignissim sollicitudin. Morbi enim orci, mollis nec ultrices sit amet, rhoncus nec mi. Aliquam ullamcorper consectetur purus. Donec ven</p>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,14 @@
 body {
 	font-family: 'Inconsolata';
 	font-size:18px;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+main {
+    flex: 1;
 }
 
 .navbar-brand {
@@ -143,8 +151,54 @@ body {
 	text-decoration: none;
 	font-weight: 600;
 	color:#343a40;
-
 }
+
+.footer-statement {
+	font-size: 0.9em;
+}
+
+.footer-statement a {
+	color:#fff;
+}
+
+.footer-statement a:hover {
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.footer-statement span {
+	font-size: 1.2em;
+}
+
+.footer-image img {
+	width:100px;
+}
+
+.footer-image {
+	padding:0;
+	margin: 0;
+}
+
+.footer-social-icons i {
+	color:#ddd;
+	font-size:30px;
+}
+
+.footer-social-icons i:hover {
+	color:#fff;
+}
+
+.footer-address p {
+	margin:0;
+	margin-left: 30px;
+	padding:0;
+}
+
+.footer-address {
+	margin:0;
+	margin-top:20px;
+}
+
 
 
 @media (min-width: 800px) {

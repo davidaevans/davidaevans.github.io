@@ -18,6 +18,10 @@ exclude:
   - CNAME
   - design-pages
   - .DS_Store
+  - _diary
+  - _pages
+  - 404.md
+  - _blog
 
 
 collections:

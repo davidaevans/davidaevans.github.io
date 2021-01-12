@@ -1,8 +1,63 @@
-<html>
-<head>
-<title>Coming Soon</title>
-</head>
-<body>
-<h1>Coming soon...</h1>
-</body>
-</html>
+---
+layout: default
+---
+
+<div class="container">
+
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container-fluid">
+		    <h1 class="display-4">{{site.author.name</h1>
+		    <p class="lead">PhD student at The University of Durham. Part of Cohort 7 of SOFI2.</p>
+		    <p><a href="{{site.baseurl}}/about">About Me</a></p>
+		  </div>
+		</div>
+
+	<div class="recent-blogs">
+		<div>
+			<h2><a href="{{ site.baseurl }}/blog">Recent Blog Posts</a></h2>
+		</div>
+		<div class="row">
+			{% for post in site.blog %}
+			<div class="col-md-3 my-3 align-items-stretch d-flex">
+				<div class="card">
+				  <div class="card-body">
+				    <h5 class="card-title"><a href="{{ site.baseurl }}/blog/{{post.url}}">{{ post.title }}</a></h5>
+				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
+				    <p class="card-text">{{ post.description}}</p>
+					<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</a>
+				  </div>
+				</div>
+			</div>
+			{% end for %}
+		</div>
+		<div class="see-more float-right">
+			<p><a href="{{ site.baseurl }}/blog">See more...</a></p>
+		</div>
+	</div>	
+
+	<div class="recent-diary">
+		<div>
+			<h2><a href="#">Recent Diary Posts</a></h2>
+		</div>
+
+
+		<div class="row">
+			{% for post in site.diary %}
+			<div class="col-md-3 my-3 align-items-stretch d-flex">
+				<div class="card">
+				  <div class="card-body">
+				    <h5 class="card-title"><a href="{{ site.baseurl }}/diary/{{post.url}}">{{ post.title }}</a></h5>
+				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
+				    <p class="card-text">{{ post.description}}</p>
+					<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</a>
+				  </div>
+				</div>
+			</div>
+			{% end for %}
+		</div>
+		<div class="see-more float-right">
+			<p><a href="{{ site.baseurl }}/diary">See more...</a></p>
+		</div>
+	</div>
+
+</div>

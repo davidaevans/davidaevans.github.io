@@ -10,6 +10,81 @@ body {
 main {
     flex: 1;
 }
+/*
+.jumbotron {
+	background: url("imgs/durham.jpg") no-repeat center center;
+	background-size: 100% 100%; 
+}
+*/
+.jumbotron {
+	color:#000;
+	padding-top:60px;
+	padding-left:20px;
+	padding-bottom:20px;
+}
+
+.jumbotron h1 {
+	font-weight: 600;
+}
+
+.jumbotron p {
+	font-weight: 500;
+	margin-top:30px;
+	margin-bottom:0;
+}
+
+.jumbotron a{
+	font-size:1.2em;
+	font-weight:500;
+	color:#000;
+}
+
+.jumbotron a:hover{
+	font-weight:700;
+	text-decoration: none;
+}
+
+
+.recent-blogs, .recent-diary {
+	margin-top:40px;
+	margin-bottom: 20px:;
+}
+
+.recent-blogs h2 a, .recent-diary h2 a{
+	color:#000;
+}
+
+.recent-blogs h2 a:hover, .recent-diary h2 a:hover {
+	color:#000;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.see-more p a{
+	font-size:20px; 
+	color:#000;
+}
+
+.see-more p a:hover {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.card-title {
+	font-weight:500;
+	background-color: #eee;
+	border-radius: 3px;
+	padding:10px;
+}
+
+.card-title a {
+	color:#000;
+}
+
+.card-title a:hover {
+	text-decoration: none;
+	font-weight:700;
+}
 
 .navbar-brand {
   /*width:150px;*/

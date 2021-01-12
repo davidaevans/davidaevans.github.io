@@ -1,6 +1,6 @@
 
 
-baseurl: "davidaevans.uk"
+baseurl: "www.davidaevans.uk"
 
 author:
   name: "David Evans"
@@ -29,7 +29,7 @@ collections:
     permalink: /:collection/:path/
 
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+# Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
 
 version: v3.9.0

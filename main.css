@@ -108,7 +108,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	padding:5px;
-	color:#868e96;
+	color:#000;
 }
 
 .tag:hover {
@@ -126,7 +126,7 @@ body {
 	border: 1px solid black;
 	border-radius: 3px;
 	padding:5px;
-	color:#868e96;
+	color:#000;
 }
 
 .category:hover {

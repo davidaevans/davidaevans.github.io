@@ -1,0 +1,66 @@
+			<div class="col-md-4 d-none d-lg-block">
+				<div class="sticky-top p-5 sidebar">
+					<div class="text-center mx-auto">
+						<img src="imgs/memoji.png">
+					</div>
+				
+					<div class="sidebar-name">{{ site.author.name }}</div>
+					<div class="sidebar-bio">{{ site.author.bio }}</div>
+					<hr>
+					<div class="sidebar-links">
+						<ul class="fa-ul">
+							<li>
+								<span class="sidebar-icon"> <i class="fas fa-li fa-map-marker-alt"></i> </span>
+								<span class="sidebar-text">{{ site.author.location }}</span>
+							</li>
+
+
+							{% if site.socials.email %}
+
+
+							<li>
+								<span class="sidebar-icon"><i class="fas fa-li fa-envelope-square"></i></span>
+								<span class="sidebar-link"><a href="mailto:{{ site.socials.email }}">Email</a></span>
+							</li>
+
+							{%endif}
+
+							{% if site.socials.twitter %}
+
+							<li>
+								<span class="sidebar-icon"><i class="fab fa-li fa-twitter-square"></i></span>
+								<span class="sidebar-link"><a href="https://www.twitter.com/{{ site.socials.twitter }}">Twitter</a></span>
+							</li>
+
+							{% end if %}
+
+							{% if site.socials.instagram %}
+							<li>
+								<span class="sidebar-icon"><i class="fab fa-li fa-instagram-square"></i></span>
+								<span class="sidebar-link"><a href="https://instagram.com/{{ site.socials.instagram }}">Instagram</a></span>
+							</li>
+
+							{% end if %}
+
+							{% if site.socials.github %}
+
+							<li>
+								<span class="sidebar-icon"><i class="fab fa-li fa-github-square"></i></span>
+								<span class="sidebar-link"><a href="https://www.github.com/{{ site.socials.github }}">Github</a></span>
+							</li>
+
+							{% end if %}
+
+							{% if site.socials.linkedin %}
+
+							<li>
+								<span class="sidebar-icon"><i class="fab fa-li fa-linkedin"></i></span>
+								<span class="sidebar-link"><a href="https://www.linkedin.com/in/{{ site.socials.linkedin }}">LinkedIn</a></span>
+							</li>
+
+							{% end if %}
+
+						</ul>
+					</div>	
+				</div>
+			</div>

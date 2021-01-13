@@ -20,7 +20,7 @@ permalink: /blog/
     	<div class="row">
     		<div class="col-lg-8">
     			<div class="archive-post-title">
-    				<a href="{{ post.url }}">{{ post.title | truncate:50 }}</a>
+    				<a href="{{ post.url }}">{{ post.title | truncate:40 }}</a>
     			</div>
     		</div>
     		<div class="col-lg-4 text-lg-right archive-faint archive-small">
@@ -29,7 +29,7 @@ permalink: /blog/
     		
     	</div>
     	<div class="archive-post-excerpt">
-    		{{ post.excerpt | truncate:200}} 
+    		{{ post.excerpt | strip_html | strip_newlines | truncate: 200 }} 
     	</div>
     	<div class="archive-faint archive-small">
     		<i class="far fa-calendar"></i> Posted on {{ post.date | date: "%-d %B %Y" }}

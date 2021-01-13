@@ -7,9 +7,9 @@ permalink: /
 
 		<div class="jumbotron jumbotron-fluid">
 		  <div class="container-fluid">
-		    <h1 class="display-4">David Evans</h1>
-		    <p class="lead">PhD student at The University of Durham. Part of Cohort 7 of SOFI2.</p>
-		    <p><a href="#">About Me</a></p>
+		    <h1 class="display-4">{{ site.author.name }}</h1>
+		    <p class="lead">{{ site.author.bio }}</p>
+		    <p><a href="/about">About Me</a></p>
 		  </div>
 		</div>
 
@@ -18,16 +18,23 @@ permalink: /
 			<h2><a href="#">Recent Blog Posts</a></h2>
 		</div>
 		<div class="row">
+
+			{% for post in site.blog %}
+
 			<div class="col-md-3 my-3 align-items-stretch d-flex">
 				<div class="card">
 				  <div class="card-body">
-				    <h5 class="card-title"><a href="#">This is the Title of a Post That I wrote</a></h5>
+				    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
 				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
 				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a class="card-link mt-auto"><i class="far fa-calendar"></i> 12 January 2021</a>
+					<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</a>
 				  </div>
 				</div>
 			</div>
+
+			{% endfor %}
+
+
 			<div class="col-md-3 my-3 align-items-stretch d-flex">
 				<div class="card">
 				  <div class="card-body">

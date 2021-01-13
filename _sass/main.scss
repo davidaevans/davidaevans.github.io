@@ -274,13 +274,25 @@ main {
 	margin-top:20px;
 }
 
+.archive-list ul {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
 
-
+.archive-post-title a {
+	text-decoration: none;
+}
+.archive-post-title a:hover {
+	text-decoration: none;
+}
+/*
 @media (min-width: 800px) {
     .container{
         max-width: 1200px;
     }
 }
+*/
 
 
 

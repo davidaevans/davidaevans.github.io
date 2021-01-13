@@ -11,6 +11,10 @@ author:
   name: "David Evans"
   bio: "PhD student at The University of Durham. Part of Cohort 7 of SOFI2 CDT."
   location: "Durham, UK"
+  address1: "Address Line 1"
+  address2: "Address Line 2"
+  city: "Durham"
+  postcode: "DH1 1DH"
 
 socials:
   twitter: "davidevans120"

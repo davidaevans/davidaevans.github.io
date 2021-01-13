@@ -8,27 +8,30 @@
 
 					<div class="footer-social-icons align-middle">
 						<div class="btn-group" role="group">
-  						<a class="btn p-0 mx-4" href="https://github.com"><i class="far fa-envelope"></i></a>
-  						<a class="btn p-0 mx-4" href="https://github.com"><i class="fab fa-github"></i></a>
-  						<a class="btn p-0 mx-4" href="https://github.com"><i class="fab fa-twitter"></i></a>
-						  <a class="btn p-0 mx-4" href="https://github.com"><i class="fab fa-linkedin-in"></i></a>
-						  <a class="btn p-0 mx-4" href="https://github.com"><i class="fab fa-instagram"></i></a>
+
+
+						{% for item in site.data.social-links %}
+
+  						<a class="btn p-0 mx-4" href="{{ item.link }}">{{item.icon}}</a>
+
+  						{% endfor %}
+
 						</div>
 					</div>
 
 				</div>
 				<div class="col-md-3">
 					<div class="footer-address text-center">
-						<p>Address 1</p>
-						<p>Address line 2</p>
-						<p>Durham</p>
-						<p>DH1 1DH</p>
+						<p>{{ site.author.address1 }}</p>
+						<p>{{ site.author.address2 }}</p>
+						<p>{{ site.author.city }}</p>
+						<p>{{ site.author.postcode }}</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<p class="footer-statement text-center py-2"><span>&#169</span> David Evans 2021 - Powered by <a href="https://jekyllrb.com">Jekyll</a> and Hosted on <a href="https://pages.github.com">GitHub Pages</a></p>
+					<p class="footer-statement text-center py-2"><span>&#169</span> {{ site.author.name }} {{ 'now' | date: "%Y" }} - Powered by <a href="https://jekyllrb.com">Jekyll</a> and Hosted on <a href="https://pages.github.com">GitHub Pages</a></p>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,29 @@
+
+
+url: "www.davidaevans.uk"
+
+author:
+  name: "David Evans"
+  bio: "PhD student at The University of Durham. Part of Cohort 7 of SOFI2."
+  location: "Durham, UK"
+
+socials:
+  twitter: "davidevans120"
+  instagram: "david_evans69"
+  github: "davidaevans"
+  email: "david.evans@dur.ac.uk"
+  linkedin:
+
+exclude:
+  - CNAME
+  - design-pages
+
+
+
+
+
+kramdown:
+# Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+
+version: v3.9.0

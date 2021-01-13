@@ -14,7 +14,7 @@ layout: default
 
 	<div class="recent-blogs">
 		<div>
-			<h2><a href="#">Recent Blog Posts</a></h2>
+			<h2><a href="{{ site.url }}/blog">Recent Blog Posts</a></h2>
 		</div>
 		<div class="row">
 
@@ -40,58 +40,37 @@ layout: default
 
 		</div>
 		<div class="see-more float-right">
-			<p><a href="#">See more...</a></p>
+			<p><a href="{{ site.url }}/blog">See more...</a></p>
 		</div>
 	</div>	
 
 	<div class="recent-diary">
 		<div>
-			<h2><a href="#">Recent Diary Posts</a></h2>
+			<h2><a href="{{ site.url }}/diary">Recent Diary Posts</a></h2>
 		</div>
 		<div class="row">
-			<div class="col-md-3 my-3 align-items-stretch d-flex">
-				<div class="card">
-				  <div class="card-body">
-				    <h5 class="card-title"><a href="#">This is the Title of a Post That I wrote</a></h5>
-				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a class="card-link mt-auto"><i class="far fa-calendar"></i> 12 January 2021</a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-3 my-3 align-items-stretch d-flex">
-				<div class="card">
-				  <div class="card-body">
-				    <h5 class="card-title"><a href="#">This is the Title of a Post That I wrote</a></h5>
-				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a class="card-link mt-auto"><i class="far fa-calendar"></i> 12 January 2021</a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-3 my-3 align-items-stretch d-flex">
-				<div class="card">
-				  <div class="card-body">
-				    <h5 class="card-title"><a href="#">This is the Title of a Post That I wrote</a></h5>
-				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a class="card-link mt-auto"><i class="far fa-calendar"></i> 12 January 2021</a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-3 my-3 align-items-stretch d-flex">
-				<div class="card">
-				  <div class="card-body">
-				  	<h5 class="card-title"><a href="#">This is the Title of a Post That I wrote</a></h5>
-				    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a class="card-link mt-auto"><i class="far fa-calendar"></i> 12 January 2021</a>
-				  </div>
-				</div>
-			</div>
+
+			{% assign counter = 0 %}
+
+			{% for post in site.diary reversed %}
+				{% if counter < 4 %}
+					<div class="col-md-3 my-3 align-items-stretch d-flex">
+						<div class="card">
+						  <div class="card-body">
+						    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title | capitalize | truncate: 50}}</a></h5>
+						    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
+						    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}  </p>
+							<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</a>
+						  </div>
+						</div>
+					</div>
+					{% assign counter = counter | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+
 		</div>
 		<div class="see-more float-right">
-			<p><a href="#">See more...</a></p>
+			<p><a href="{{ site.url }}/diary">See more...</a></p>
 		</div>
 	</div>
 

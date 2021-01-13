@@ -4,7 +4,7 @@ title: Blog Archive
 permalink: /blog/
 ---
 
-{% for post in site.blog %}
+{% for post in site.blog reversed %}
   {% assign currentdate = post.date | date: "%Y" %}
   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}

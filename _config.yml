@@ -1,6 +1,7 @@
 
 
 url: "www.davidaevans.uk"
+baseurl: "/"
 
 author:
   name: "David Evans"

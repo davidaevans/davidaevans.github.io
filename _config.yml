@@ -23,6 +23,9 @@ socials:
   email: "david.evans@dur.ac.uk"
   linkedin:
 
+include:
+  - _pages
+
 exclude:
   - CNAME
   - design-pages

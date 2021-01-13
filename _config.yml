@@ -4,7 +4,7 @@ url: "www.davidaevans.uk"
 baseurl: "/"
 
 sass:
-#  sass_dir: _sass
+  sass_dir: _sass
   style: compressed
 
 author:

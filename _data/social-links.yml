@@ -1,15 +1,20 @@
 - name: Email
   link: mailto:david.evans@dur.ac.uk
   icon: <i class="fas fa-li fa-envelope-square"></i>
+  icon-footer: <i class="fas fa-li fa-envelope"></i>
 - name: Twitter
   link: https://www.twitter.com/davidevans120
   icon: <i class="fab fa-li fa-twitter-square"></i>
+  icon-footer: <i class="fab fa-li fa-twitter"></i>
 - name: Instagram
   link: https://www.instagram.com/david_evans69
   icon: <i class="fab fa-li fa-instagram-square"></i>
+  icon-footer: <i class="fab fa-li fa-instagram"></i>
 - name: LinkedIn
   link: https://www.linkedin.com/in/david-evans-1ab91a170/
   icon: <i class="fab fa-li fa-linkedin"></i>
+  icon-footer: <i class="fab fa-li fa-linkedin-in"></i>
 - name: GitHub
   link: https://www.github.com/davidaevans
   icon: <i class="fab fa-li fa-github-square"></i>
+  icon-footer: <i class="fab fa-li fa-github"></i>

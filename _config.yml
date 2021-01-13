@@ -3,6 +3,10 @@
 url: "www.davidaevans.uk"
 baseurl: "/"
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 author:
   name: "David Evans"
   bio: "PhD student at The University of Durham. Part of Cohort 7 of SOFI2."

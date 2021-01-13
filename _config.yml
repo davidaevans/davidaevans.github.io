@@ -38,6 +38,9 @@ collections:
   diary:
     output: true
     permalink: /:collection/:path/
+  pages:
+    output: true
+    permalink: /:path/
 
 
 kramdown:

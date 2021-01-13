@@ -28,7 +28,13 @@ exclude:
   - design-pages
 
 
-
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:path/
+  diary:
+    output: true
+    permalink: /:collection/:path/
 
 
 kramdown:

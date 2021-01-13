@@ -4,34 +4,25 @@
 					</div>
 				
 					<div class="sidebar-name">{{ site.author.name }}</div>
-					<div class="sidebar-bio">PhD student at The University of Durham, UK</div>
+					<div class="sidebar-bio">{{ site.author.bio }}</div>
 					<hr>
 					<div class="sidebar-links">
 						<ul class="fa-ul">
 							<li>
 								<span class="sidebar-icon"> <i class="fas fa-li fa-map-marker-alt"></i> </span>
-								<span class="sidebar-text">Durham, UK</span>
+								<span class="sidebar-text">{{ site.author.location }}</span>
 							</li>
+
+							{% for item in site.data.social-links %}
+
 							<li>
-								<span class="sidebar-icon"><i class="fas fa-li fa-envelope-square"></i></span>
-								<span class="sidebar-link"><a href="https://www.github.com">Email</a></span>
+								<span class="sidebar-icon">{{item.icon}}</span>
+								<span class="sidebar-link"><a href="item.link">{{item.name}}</a></span>
 							</li>
-							<li>
-								<span class="sidebar-icon"><i class="fab fa-li fa-github-square"></i></span>
-								<span class="sidebar-link"><a href="https://www.github.com">Github</a></span>
-							</li>
-							<li>
-								<span class="sidebar-icon"><i class="fab fa-li fa-twitter-square"></i></span>
-								<span class="sidebar-link"><a href="https://www.github.com">Twitter</a></span>
-							</li>
-							<li>
-								<span class="sidebar-icon"><i class="fab fa-li fa-linkedin"></i></span>
-								<span class="sidebar-link"><a href="https://www.github.com">LinkedIn</a></span>
-							</li>
-							<li>
-								<span class="sidebar-icon"><i class="fab fa-li fa-instagram-square"></i></span>
-								<span class="sidebar-link"><a href="https://www.github.com">Instagram</a></span>
-							</li>
+
+							{% endfor %}
+
+							
 						</ul>
 					</div>	
 				</div>

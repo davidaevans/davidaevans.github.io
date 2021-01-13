@@ -1,0 +1,15 @@
+- name: Email
+  link: mailto:david.evans@dur.ac.uk
+  icon: <i class="fas fa-li fa-envelope-square"></i>
+- name: Twitter
+  link: www.twitter.com/davidevans120
+  icon: <i class="fab fa-li fa-twitter-square"></i>
+- name: Instagram
+  link: www.instagram.com/david_evans69
+  icon: <i class="fab fa-li fa-instagram-square"></i>
+- name: LinkedIn
+  link: www.linkedin.com/in/
+  icon: <i class="fab fa-li fa-linkedin"></i>
+- name: GitHub
+  link: www.github.com/davidaevans
+  icon: <i class="fab fa-li fa-github-square"></i>

@@ -1,6 +1,12 @@
 
 
-baseurl: "www.davidaevans.uk"
+url: "www.davidaevans.uk"
+baseurl: "/"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
 
 author:
   name: "David Evans"
@@ -17,20 +23,7 @@ socials:
 exclude:
   - CNAME
   - design-pages
-  - .DS_Store
-  - _diary
-  - _pages
-  - 404.md
-  - _blog
 
-
-collections:
-  blog:
-    output: true
-    permalink: /:collection/:path/
-  diary:
-    output: true
-    permalink: /:collection/:path/
 
 kramdown:
 # Use GitHub flavored markdown, including triple backtick fenced code blocks

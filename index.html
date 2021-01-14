@@ -16,7 +16,7 @@ layout: default
 		{% for collection in site.collections %}
 
 		{% assign name = collection.label %}
-
+			{% if name != "posst" %}
 
 		  	<div class="recent-posts-index">
 				<div>
@@ -49,6 +49,8 @@ layout: default
 					<p><a href="{{ site.url }}/{{ name }}">See more...</a></p>
 				</div>
 			</div>
+
+			{% endif %}
 		  
 		{% endfor %}
 

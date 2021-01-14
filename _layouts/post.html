@@ -21,12 +21,12 @@ layout: default
 					</div>
 					<div class="row mt-4">
 						<div class="col-md-7">
-							<div class="posted-date">
+							<div class="posted-date faint-text">
 								<i class="far fa-calendar"></i> Posted on {{ page.date | date: "%-d %B %Y" }}
 							</div>
 						</div>
 						<div class="col-md-5">
-							<div class="reading-time float-md-right">
+							<div class="reading-time float-md-right faint-text">
 								<i class="far fa-clock text-right"></i> 1 minute read
 							</div>
 						</div>
@@ -35,7 +35,7 @@ layout: default
 					{% if page.date-modified %}
 
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-12 faint-text">
 							<i class="far fa-edit"></i> Edited on {{ page.date-modified | date: "%-d %B %Y" }}
 						</div>
 					</div>

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Test diary post #1"
 date: 2021-01-14
 ---

@@ -30,6 +30,26 @@ exclude:
   - CNAME
   - design-pages
 
+defaults:
+  - scope:
+      path: ""
+      type: "diary"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "page"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 collections:
   blog:

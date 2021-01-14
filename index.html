@@ -12,67 +12,48 @@ layout: default
 		  </div>
 		</div>
 
-	<div class="recent-blogs">
-		<div>
-			<h2><a href="{{ site.url }}/blog">Recent Blog Posts</a></h2>
-		</div>
-		<div class="row">
+
+		{% for collection in site.collections %}
+
+		{% assign name = collection.label %}
+
+
+		  	<div class="recent-posts-index">
+				<div>
+					<h2><a href="{{ site.url }}/blog">Recent {{[name]}} Posts</a></h2>
+				</div>
+				<div class="row">
 
 
 
-			{% assign counter = 0 %}
+					{% assign counter = 0 %}
 
-			{% for post in site.blog reversed %}
-				{% if counter < 4 %}
-					<div class="col-lg-3 my-3 align-items-stretch d-flex">
-						<div class="card">
-						  <div class="card-body">
-						    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title | capitalize | truncate: 50}}</a></h5>
-						    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-						    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}  </p>
-							<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</a>
-						  </div>
-						</div>
-					</div>
-					{% assign counter = counter | plus: 1 %}
-				{% endif %}
-			{% endfor %}
+					{% for post in site.[name] reversed %}
+						{% if counter < 4 %}
+							<div class="col-lg-3 my-3 align-items-stretch d-flex">
+								<div class="card">
+								  <div class="card-body">
+								    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title | capitalize | truncate: 50}}</a></h5>
+								    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
+								    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}  </p>
+									<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</a>
+								  </div>
+								</div>
+							</div>
+							{% assign counter = counter | plus: 1 %}
+						{% endif %}
+					{% endfor %}
 
-		</div>
-		<div class="see-more float-right">
-			<p><a href="{{ site.url }}/blog">See more...</a></p>
-		</div>
-	</div>	
+				</div>
+				<div class="see-more float-right">
+					<p><a href="{{ site.url }}/{{[name]}}">See more...</a></p>
+				</div>
+			</div>
+		  
+		{% endfor %}
 
-	<div class="recent-diary">
-		<div>
-			<h2><a href="{{ site.url }}/diary">Recent Diary Posts</a></h2>
-		</div>
-		<div class="row">
 
-			{% assign counter = 0 %}
 
-			{% for post in site.diary reversed %}
-				{% if counter < 4 %}
-					<div class="col-lg-3 my-3 align-items-stretch d-flex">
-						<div class="card">
-						  <div class="card-body">
-						    <h5 class="card-title"><a href="{{ post.url }}">{{ post.title | capitalize | truncate: 50}}</a></h5>
-						    <h6 class="card-subtitle mb-2 text-muted"><i class="far fa-clock"></i> 1 Minute Read</h6>
-						    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}  </p>
-							<a class="card-link mt-auto"><i class="far fa-calendar"></i> {{ post.date | date: "%-d %B %Y" }}</a>
-						  </div>
-						</div>
-					</div>
-					{% assign counter = counter | plus: 1 %}
-				{% endif %}
-			{% endfor %}
-
-		</div>
-		<div class="see-more float-right">
-			<p><a href="{{ site.url }}/diary">See more...</a></p>
-		</div>
-	</div>
 
 
 

@@ -20,7 +20,7 @@ layout: default
 
 		  	<div class="recent-posts-index">
 				<div>
-					<h2><a href="{{ site.url }}/blog">Recent {{[name]}} Posts</a></h2>
+					<h2><a href="{{ site.url }}/blog">Recent {{ name | capitalize}} Posts</a></h2>
 				</div>
 				<div class="row">
 
@@ -46,7 +46,7 @@ layout: default
 
 				</div>
 				<div class="see-more float-right">
-					<p><a href="{{ site.url }}/{{[name]}}">See more...</a></p>
+					<p><a href="{{ site.url }}/{{ name }}">See more...</a></p>
 				</div>
 			</div>
 		  

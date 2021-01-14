@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Test diary post #1
+title: "Test diary post #1"
+date: 2021-01-14
 ---
 
 There was a young boy from fife, who did have a terrible life. He woke up one day, in utter dismay, because he was still next to his wife.

@@ -22,12 +22,12 @@
    	<div class="col-md-6">
       
         {% if prevurl %}
-        <a href="{{ prevurl }}" class="previous-post">Previous Post</a>
+        <a href="{{ prevurl }}" class="previous-post">{{prev.title}}</a>
         {% endif %}
     </div>
 	<div class="col-md-6">
         {% if nexturl %}
-        <a href="{{ nexturl }}" class="next-post float-md-right">Next Post</a>
+        <a href="{{ nexturl }}" class="next-post float-md-right">{{next.title}}</a>
         {% endif %}
     </div>
 

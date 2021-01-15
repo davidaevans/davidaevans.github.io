@@ -25,7 +25,7 @@
       
         {% if prevurl %}
  		<div class="previous-post">
-        	<p class="previous-post-headline">Previous Post</p>
+        	<p class="previous-post-headline"><a href="{{prevurl}}">Previous Post</a></p>
         	<p><a href="{{ prevurl }}" class="previous-post">{{prev.title}}</a></p>
         </div>
 
@@ -35,7 +35,7 @@
 	<div class="col-md-6">
         {% if nexturl %}
         <div class="float-md-right next-post">
-        	<p class="float-md-right next-post-headline">Next Post</p>
+        	<p class="float-md-right next-post-headline"><a href="{{ nexturl }}">Next Post</a></p>
         	<p><a href="{{ nexturl }}" class="next-post float-md-right">{{next.title}}</a></p>
         </div>
 

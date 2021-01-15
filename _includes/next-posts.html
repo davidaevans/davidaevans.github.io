@@ -29,8 +29,13 @@
     </div>
 	<div class="col-md-6">
         {% if nexturl %}
-        <p class="next-post float-md-right">Next Post</p>
-        <a href="{{ nexturl }}" class="next-post float-md-right">{{next.title}}</a>
+        <div class="float-md-right">
+        	<p class="">Next Post</p>
+        	<p><a href="{{ nexturl }}" class="next-post float-md-right">{{next.title}}</a></p>
+        </div>
+
+        
+        
         {% endif %}
     </div>
 

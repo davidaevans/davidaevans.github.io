@@ -1,0 +1,41 @@
+
+
+	{% for collection in site.collections %}
+		{% if page.collection == collection.label %}
+			{% assign index = 0 %}
+			{% for post in site.[collection] %}
+				{% if page.url == post.url %}
+					{% unless forloop.first %}
+
+						{% assign index_prev = index | minus: 1 %}
+						{% assign prev_post = site.[collection][index_prev] %}
+
+					{% endunless %}
+
+					{% unless forloop.last %}
+
+						{%- assign index_next = index | plus: 1 -%}
+						{% assign next_post = site.[collection][index_next] %}
+					{% endunless %}
+
+					<div class="col-md-6">
+					{% if prev_post %}
+						
+							<a href="{{ prev_post.url }}" class="previous-post">Previous Post</a>
+						
+					{% endif %}
+					</div>
+					<div class="col-md-6">
+						
+					{% if next_post %}
+							<a href="{{ next_post.url }}" class="next-post float-md-right">Next Post</a>
+					{% endif %}
+					</div>
+					
+
+				{% endif %}
+			{% assign index = index | plus: 1 %}
+
+			{% endfor %}
+		{% endif %}
+	{% endfor %}

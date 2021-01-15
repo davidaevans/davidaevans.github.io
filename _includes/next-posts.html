@@ -1,10 +1,10 @@
 
 
 	{% for collection in site.collections %}
-		{% if page.collection == collection.label %}
+		{% if page.collection = collection.label %}
 			{% assign index = 0 %}
 			{% for post in site.[collection] %}
-				{% if page.url == post.url %}
+				{% if page.url = post.url %}
 					{% unless forloop.first %}
 
 						{% assign index_prev = index | minus: 1 %}

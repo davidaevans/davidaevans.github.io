@@ -218,14 +218,18 @@ main {
 	color:#343a40;
 }
 
-.previous-post, .next-post{
+.previous-post a, .next-post a{
 	color:#000;
 }
 
-.previous-post:hover, .next-post:hover {
+.previous-post a:hover, .next-post a:hover {
 	text-decoration: none;
 	font-weight: 600;
 	color:#343a40;
+}
+
+.previous-post, .next-post p {
+	margin:0;
 }
 
 .footer-statement {

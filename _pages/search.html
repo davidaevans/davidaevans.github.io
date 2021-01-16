@@ -41,7 +41,7 @@ permalink: /search
 					<script>
   window.store = {
     {% for post in site.blog %}
-    	const postDate = moment( {{ post.date }} )
+    	var postDate = moment( {{ post.date }} )
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "date": [postDate.format(D, MMMM, YYYY)],

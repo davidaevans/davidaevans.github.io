@@ -64,6 +64,7 @@
       this.field('id');
       this.field('title', { boost: 10 });
       this.field('date');
+      this.field('collection');
       this.field('readtime');
       this.field('content');
     
@@ -73,6 +74,7 @@
           'id': key,
           'title': window.store[key].title,
           'date': window.store[key].date,
+          'collection': window.store[key].collection,
           'readtime': window.store[key].readtime,
           'content': window.store[key].content
         });

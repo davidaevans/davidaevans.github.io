@@ -324,6 +324,7 @@ main {
 	width:100%;
 	border: 0px none;
 	margin:0;
+	font-size:1.2em;
 }
 
 .search-input input:focus {
@@ -331,6 +332,10 @@ main {
 }
 
 .search-input form {
+	margin:0;
+}
+
+.post {
 	margin:0;
 }
 

@@ -13,15 +13,16 @@
         appendString += '<div class="row">'; 
         appendString += '<div class="col-lg-8">';
         appendString += '<div class="archive-post-title">';
-        appendString += '<a href="' + item.url + '">' + item.title.substring(0,40).trim() + '</a>';
+        appendString += '<a href="' + item.url + '">' + item.title.substring(0,40) + '</a>';
         appendString += '</div>';
         appendString += '</div>';
         appendString += '<div class="col-lg-4 text-lg-right archive-faint archive-small">';
         appendString += '<i class="far fa-clock text-right mt-auto"></i>';
         appendString += item.readtime;
         appendString += '</div>';
+        appendString += '</div>';
         appendString += '<div class="archive-post-excerpt">';
-        appendString += item.content.substring(0,200);
+        appendString += item.content.substring(0,200) + '...';
         appendString += '</div>';
         appendString += '<div class="archive-faint archive-small">';
         appendString += '<i class="far fa-calendar"></i> Posted on ';

@@ -41,18 +41,20 @@ permalink: /search
 					<script>
   window.store = {
   	{% for collection in site.collections %}
-    {% for post in site.[collection] reversed %}
-      "{{ post.url | slugify }}": {
-        "title": "{{ post.title | xml_escape }}",
-        "date": "{{ post.date | date: "%-d %B %Y" | xml_escape }}",
-        "collection": "{{ collection.label }}",
-        "readtime": " 1 min read",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
-      }
+  		{% if collection.label != "posts" %}
+    		{% for post in site.[collection] reversed %}
+      			"{{ post.url | slugify }}": {
+       			"title": "{{ post.title | xml_escape }}",
+        		"date": "{{ post.date | date: "%-d %B %Y" | xml_escape }}",
+        		"collection": "{{ collection.label }}",
+        		"readtime": " 1 min read",
+        		"content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        		"url": "{{ post.url | xml_escape }}"
+      		}
       
-    {% endfor %}
-    {% unless forloop.last %},{% endunless %}
+    		{% endfor %}
+    	{% endif %}
+    	{% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
 </script>

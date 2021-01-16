@@ -26,7 +26,7 @@
         appendString += '</div>';
         appendString += '<div class="archive-faint archive-small">';
         appendString += '<i class="far fa-calendar"></i> Posted on ';
-        appendString += item.date.substring(0,10);
+        appendString += item.date;
         appendString += '</div>';
         appendString += '<hr>';
         appendString += '</li>';
@@ -76,7 +76,6 @@
           'readtime': window.store[key].readtime,
           'content': window.store[key].content
         });
-        console.log(window.store[key].date);
       }
     });
 

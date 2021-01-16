@@ -44,7 +44,7 @@ permalink: /search
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "date": "{{ post.date | date: \"%-d %B %Y\" | xml_escape }}",
-        "readtime": "1 min read",
+        "readtime": " 1 min read",
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }

@@ -13,7 +13,7 @@
         appendString += '<div class="row">'; 
         appendString += '<div class="col-lg-8">';
         appendString += '<div class="archive-post-title">';
-        appendString += '<a href="' + item.url + '">' + item.title.substring(0,40) + '</a>';
+        appendString += '<a href="' + item.url + '">' + item.title.substring(0,40).trim() + '</a>';
         appendString += '</div>';
         appendString += '</div>';
         appendString += '<div class="col-lg-4 text-lg-right archive-faint archive-small">';
@@ -25,7 +25,7 @@
         appendString += '</div>';
         appendString += '<div class="archive-faint archive-small">';
         appendString += '<i class="far fa-calendar"></i> Posted on ';
-        appendString += item.date
+        appendString += item.date.substring(0,10);
         appendString += '</div>';
         appendString += '<hr>';
         appendString += '</li>';

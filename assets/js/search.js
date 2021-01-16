@@ -7,8 +7,30 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+
+
+        appendString += '<li class="archive-item">';
+        appendString += '<div class="row">'; 
+        appendString += '<div class="col-lg-8">';
+        appendString += '<div class="archive-post-title">';
+        appendString += '<a href="' + item.url + '">' item.title.substring(0,40) + '</a>';
+        appendString += '</div>';
+        appendString += '</div>';
+        appendString += '<div class="col-lg-4 text-lg-right archive-faint archive-small">';
+        appendString += '<i class="far fa-clock text-right mt-auto"></i>';
+        appendString += item.readtime;
+        appendString += '</div>';
+        appendString += '<div class="archive-post-excerpt">';
+        appendString += item.content.substring(0,200);
+        appendString += '</div>';
+        appendString += '<div class="archive-faint archive-small">';
+        appendString += '<i class="far fa-calendar"></i> Posted on ';
+        appendString += item.date
+        appendString += '</div>';
+        appendString += '<hr>';
+        appendString += '</li>';
+
+
       }
 
       searchResults.innerHTML = appendString;
@@ -40,8 +62,8 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('author');
-      this.field('category');
+      this.field('date');
+      this.field('readtime');
       this.field('content');
     
 
@@ -49,8 +71,8 @@
         this.add({
           'id': key,
           'title': window.store[key].title,
-          'author': window.store[key].author,
-          'category': window.store[key].category,
+          'date': window.store[key].author,
+          'readtime': window.store[key].category,
           'content': window.store[key].content
         });
       }

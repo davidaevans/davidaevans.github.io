@@ -30,12 +30,12 @@ permalink: /search
 
 					<hr>
 
-					<div class="search-results-div">
+					<div class="archive-list">
 						<ul id="search-results">
 							
-						</ul>
+						<ul>
 						
-						
+						{% include read-time.html content=post.content %}
 
 					</div>
 
@@ -44,8 +44,8 @@ permalink: /search
     {% for post in site.blog %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
-        "author": "{{ post.author | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
+        "date": "{{ post.date | date: \"%-d %B %Y\" | xml_escape }}",
+        "readtime": "{% include read-time.html content=post.content %}",
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }

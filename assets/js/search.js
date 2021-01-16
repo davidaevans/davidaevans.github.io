@@ -72,10 +72,11 @@
         this.add({
           'id': key,
           'title': window.store[key].title,
-          'date': window.store[key].author,
-          'readtime': window.store[key].category,
+          'date': window.store[key].date,
+          'readtime': window.store[key].readtime,
           'content': window.store[key].content
         });
+        console.log(window.store[key].date);
       }
     });
 

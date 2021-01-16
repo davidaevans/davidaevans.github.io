@@ -42,7 +42,7 @@ permalink: /search
   window.store = {
   	{% for collection in site.collections %}
   		{% if collection.label != "posts" %}
-    		{% for post in site.[collection] reversed %}
+    		{% for post in site.[collection.label] reversed %}
       			"{{ post.url | slugify }}": {
        			"title": "{{ post.title | xml_escape }}",
         		"date": "{{ post.date | date: "%-d %B %Y" | xml_escape }}",

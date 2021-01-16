@@ -40,10 +40,10 @@ permalink: /search
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 					<script>
   window.store = {
-
+    {% for post in site.blog %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
-        "date": "{{post.date | date: "%-d %B %Y"}}",
+        "date": "{{ post.date | date: "%-d %B %Y" | xml_escape }}",
         "readtime": " 1 min read",
         "content": "{{ post.content | strip_html | strip_newlines | jsonify }}",
         "url": "{{ post.url | xml_escape }}"

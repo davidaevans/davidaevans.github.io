@@ -40,13 +40,10 @@ permalink: /search
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 					<script>
   window.store = {
+  	{% assign index = 0 %}
+  	{% assign numOfCollections = site.collections.size | minus:2 %}
   	{% for collection in site.collections %}
-  		{% if collection.label == "posts" %}
-  			{% assign flag = true %}
-  		{% else %}
-  			{% assign flag = false %}
-  		{% endif %}
-
+  		
 
 
     		{% for post in site.[collection.label] reversed %}
@@ -58,21 +55,21 @@ permalink: /search
         		"content": {{ post.content | strip_html | strip_newlines | jsonify }},
         		"url": "{{ post.url | xml_escape }}"
       		}
-	      		{% if !flag %}
-	      			FLAG FALSE
-	      			,
-	      		{% endif %}
-	      		{% if flag %}
-	      			FLAG TRUE
-	      			{% unless forloop.last %},{% endunless %}
-	      		{% endif %}
+      		{% if index == numOfCollections %}
+	      		{% unless forloop.last %},{% endunless %}
+      		{% else %}
+      			,
+      		{% endif %}
+      		
+
 
 
     		{% endfor %}
-    	
+    {% assign index = index | plus: 1 %}
     	
     {% endfor %}
   };
+    }
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous"></script>

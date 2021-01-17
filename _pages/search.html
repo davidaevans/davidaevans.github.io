@@ -41,6 +41,7 @@ permalink: /search
 					<script>
   window.store = {
   	{% for collection in site.collections %}
+  		{% assign flag = forloop.last %}
   		{% if collection.label != "posts" %}
     		{% for post in site.[collection.label] reversed %}
       			"{{ post.url | slugify }}": {
@@ -51,7 +52,15 @@ permalink: /search
         		"content": {{ post.content | strip_html | strip_newlines | jsonify }},
         		"url": "{{ post.url | xml_escape }}"
       		}
-      		{% unless forloop.last %},{% endunless %}
+      		{% if !flag %}
+      			,
+      		{% endif %}
+      		{% if flag %}
+      			{% unless forloop.last %},{% endunless %}
+      		{% endif %}
+      		}
+      		}
+
     		{% endfor %}
     	{% endif %}
     	

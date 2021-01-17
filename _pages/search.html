@@ -41,8 +41,12 @@ permalink: /search
 					<script>
   window.store = {
   	{% for collection in site.collections %}
-  		{% assign flag = forloop.last %}
-  		{{ flag }}
+  		{% if collection.label = "posts" %}
+  			{% assign flag = true %}
+  		{% else %}
+  			{% assign flag = false %}
+  		{% endif %}
+
   		{% if collection.label != "posts" %}
     		{% for post in site.[collection.label] reversed %}
       			"{{ post.url | slugify }}": {

@@ -47,6 +47,8 @@ permalink: /search
   			{% assign flag = false %}
   		{% endif %}
 
+  		{{flag}}
+
   		{% if collection.label != "posts" %}
     		{% for post in site.[collection.label] reversed %}
       			"{{ post.url | slugify }}": {

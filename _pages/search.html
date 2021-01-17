@@ -42,7 +42,7 @@ permalink: /search
   window.store = {
   	{% for collection in site.collections %}
   		{% assign flag = forloop.last %}
-  		{% flag %}
+  		{{ flag }}
   		{% if collection.label != "posts" %}
     		{% for post in site.[collection.label] reversed %}
       			"{{ post.url | slugify }}": {

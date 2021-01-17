@@ -58,13 +58,14 @@ permalink: /search
         		"content": {{ post.content | strip_html | strip_newlines | jsonify }},
         		"url": "{{ post.url | xml_escape }}"
       		}
-      		{% if !flag %}
-      			FLAG FALSE
-      			,
-      		{% endif %}
-      		{% if flag %}
-      			{% unless forloop.last %},{% endunless %}
-      		{% endif %}
+	      		{% if !flag %}
+	      			FLAG FALSE
+	      			,
+	      		{% endif %}
+	      		{% if flag %}
+	      			FLAG TRUE
+	      			{% unless forloop.last %},{% endunless %}
+	      		{% endif %}
 
 
     		{% endfor %}

@@ -4,7 +4,7 @@
 
     if (results.length) { // Are there any results?
       var appendString = '';
-      appendString += '<li>'+results.length+' Results</li>';
+      appendString += '<li>'+results.length+' results found</li>';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
 

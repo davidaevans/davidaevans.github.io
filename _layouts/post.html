@@ -101,8 +101,8 @@ layout: default
 						{% assign coll = page.collection %}
 
 						{% assign count = 0 %}
-						{% for post in site.blog %}
-							{% if count < 4}
+						{% for post in site.[coll] %}
+							{% if count < 4 %}
 								{% if post.url != page.url %}
 						<div class="col-lg-4">
 							<div class="recommendation-title">

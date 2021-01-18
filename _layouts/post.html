@@ -101,7 +101,7 @@ layout: default
 						{% assign coll = page.collection %}
 
 						{% assign count = 0 %}
-						{% for post in site.[coll] %}
+						{% for post in site.[coll] reversed %}
 							{% if count < 3 %}
 								{% if post.url != page.url %}
 						<div class="col-lg-4">

@@ -94,7 +94,7 @@ layout: default
 
 					<hr>
 
-					<div class="recommendation-head mb-5">You might also like</div>
+					<div class="recommendation-head mb-3">You might also like</div>
 					
 					<div class="row">
 
@@ -106,7 +106,7 @@ layout: default
 								{% if post.url != page.url %}
 						<div class="col-lg-4">
 							<div class="recommendation-title">
-								<p>{{ post.title | truncate: 40 }}</p>
+								<a href="{{post.url}}">{{ post.title | capitalize | truncate: 40 }}</a>
 							</div>
 							<div class="recommendation-content">
 								<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>

@@ -19,12 +19,6 @@ author:
   city: "Durham"
   postcode: "DH1 1DH"
 
-socials:
-  twitter: "davidevans120"
-  instagram: "david_evans69"
-  github: "davidaevans"
-  email: "david.evans@dur.ac.uk"
-  linkedin:
 
 include:
   - _pages

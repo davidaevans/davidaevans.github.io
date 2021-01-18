@@ -344,8 +344,14 @@ main {
 	font-size:1.2em;
 }
 
-.recommendation-title {
+.recommendation-title a {
 	font-weight: 600;
+	text-decoration: none;
+}
+
+.recommendation-title a:hover {
+	text-decoration: none;
+	font-weight: 800;
 }
 
 

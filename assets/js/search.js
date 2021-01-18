@@ -8,7 +8,7 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
 
-        var words = item.content.length;
+        var words = item.content.split(" ").length;
         var readtime = Math.ceil(words/250); 
         console.log(words);
         console.log(readtime);

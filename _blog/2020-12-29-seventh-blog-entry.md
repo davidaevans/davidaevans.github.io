@@ -1,7 +1,7 @@
 ---
 layout: post
-title: fifth post
----
+title: Seventh blog Entry in my blog
+--- 
 
 Short abstract Suspendisse arcu diam, condimentum eu laoreet et, finibus consequat nulla. In hac habitasse platea dictumst. Aliquam eu risus auctor, porttitor nulla vitae, faucibus felis.
 

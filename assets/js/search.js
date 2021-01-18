@@ -10,6 +10,8 @@
 
         var words = item.content.length;
         var readtime = Math.ceil(words/250); 
+        console.log(words);
+        console.log(readtime);
 
         appendString += '<li class="archive-item">';
         appendString += '<div class="row">'; 

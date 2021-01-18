@@ -8,6 +8,8 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
 
+        var words = item.content.length;
+        var readtime = Math.ceil(words/250); 
 
         appendString += '<li class="archive-item">';
         appendString += '<div class="row">'; 
@@ -17,8 +19,8 @@
         appendString += '</div>';
         appendString += '</div>';
         appendString += '<div class="col-lg-4 text-lg-right archive-faint archive-small">';
-        appendString += '<i class="far fa-clock text-right mt-auto"></i>';
-        appendString += item.readtime;
+        appendString += '<i class="far fa-clock text-right mt-auto"></i> ';
+        appendString += readtime + ' minute read';
         appendString += '</div>';
         appendString += '</div>';
         appendString += '<div class="archive-post-excerpt">';

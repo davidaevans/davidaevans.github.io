@@ -55,6 +55,9 @@ defaults:
       layout: "default"
 
 collections:
+  research:
+    output: true
+    permalink: /:collection/:path/
   blog:
     output: true
     permalink: /:collection/:path/

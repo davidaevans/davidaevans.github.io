@@ -106,10 +106,10 @@ layout: default
 								{% if post.url != page.url %}
 						<div class="col-lg-4">
 							<div class="recommendation-title">
-								{{ post.title | truncate: 40 }}
+								<p>{{ post.title | truncate: 40 }}</p>
 							</div>
 							<div class="recommendation-content">
-								{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}
+								<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>
 							</div>
 						</div>
 								{% endif %}

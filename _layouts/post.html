@@ -94,33 +94,26 @@ layout: default
 
 					<hr>
 
-					<div class="recommendation-head">You might also like: {{page.collection}}</div>
+					<div class="recommendation-head">You might also like</div>
 					
 					<div class="row">
+
+						{% assign coll = page.collection %}
+						{% assign count = 0 %}
+						{% for post in site[coll] | limit: 4%}
+							{% if count < 4}
 						<div class="col-lg-4">
 							<div class="recommendation-title">
-								This is the title of a post
+								{{ post.title | truncate:40}}
 							</div>
 							<div class="recommendation-content">
-								This is some content for the post his is some content for the post his is some content for the post his is some content for the post...
+								{{post.content | truncate:100}}
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="recommendation-title">
-								This is the title of a post
-							</div>
-							<div class="recommendation-content">
-								This is some content for the post his is some content for the post his is some content for the post his is some content for the post...
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="recommendation-title">
-								This is the title of a post
-							</div>
-							<div class="recommendation-content">
-								This is some content for the post his is some content for the post his is some content for the post his is some content for the post...
-							</div>
-						</div>
+							{% endif %}
+						{% assign count = count | plus: 1 %}
+						{% endfor %}
+
 					</div>
 
 

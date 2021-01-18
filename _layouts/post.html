@@ -101,15 +101,15 @@ layout: default
 						{% assign coll = page.collection %}
 
 						{% assign count = 0 %}
-						{% for post in site.blog | limit: 4 %}
+						{% for post in site.blog %}
 							{% if count < 4}
 								{% if post.url != page.url %}
 						<div class="col-lg-4">
 							<div class="recommendation-title">
-								{{ post.title | truncate:40}}
+								{{ post.title | truncate: 40 }}
 							</div>
 							<div class="recommendation-content">
-								{{post.content | truncate:100}}
+								{{ post.content | truncate: 100 }}
 							</div>
 						</div>
 								{% endif %}

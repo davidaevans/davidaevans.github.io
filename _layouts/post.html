@@ -108,6 +108,9 @@ layout: default
 							<div class="recommendation-title">
 								<a href="{{post.url}}">{{ post.title | capitalize | truncate: 40 }}</a>
 							</div>
+							<div class="recommendation-readtime archive-small archive-faint">
+								<i class="far fa-clock text-right mt-auto"></i> {% include read-time.html content=post.content %}
+							</div>
 							<div class="recommendation-content">
 								<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>
 							</div>

@@ -266,8 +266,11 @@ main {
 .footer-icons li {
 	display: inline;
   	list-style-type: none;
-  	padding:10px;
+  	padding-right:5px;
+}
 
+.footer-icons ul {
+	padding:0;
 }
 
 .footer-social-icons i {

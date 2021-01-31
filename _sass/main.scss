@@ -356,7 +356,6 @@ main {
 	color:#000;
 }
 
-
 .pnf-container{
 	height:100%;
 }
@@ -364,6 +363,18 @@ main {
 .pnf-text {
 	text-align: center;
 	margin-top:40px;
+	font-size: 1.2em;
+}
+
+.pnf-text a {
+	text-decoration: none;
+	color:#000;
+}
+
+.pnf-text a:hover {
+	color:#000;
+	text-decoration: none;
+	font-weight: 600;
 }
 
 .pnf-image {

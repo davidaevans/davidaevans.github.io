@@ -267,11 +267,13 @@ main {
 	display: inline;
   	list-style-type: none;
   	padding:10px;
+
 }
 
 .footer-social-icons i {
 	color:#ddd;
 	font-size:30px;
+	position:static;
 }
 
 .footer-social-icons i:hover {

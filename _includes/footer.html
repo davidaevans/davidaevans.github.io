@@ -4,22 +4,22 @@
 			<div class="row">
 				<div class="col-lg-3 py-0 text-center d-none d-lg-block">
 				</div>
-				<div class="col-lg-6 text-center py-5 align-middle">
+				<div class="col-lg-6 text-center align-middle">
 
-					<div class="footer-social-icons align-middle">
+					
 						
 
-						<ul class="footer-icons">
-							
-						{% for item in site.data.social-links %}
-
-  							<li><a class="btn p-0" href="{{ item.link }}">{{item.icon-footer}}</a></li>
+					<ul class="footer-icons align-middle">
 						
+					{% for item in site.data.social-links %}
 
-  						{% endfor %}
-  						</ul>
+						<li><a class="btn p-0" href="{{ item.link }}">{{item.icon-footer}}</a></li>
+					
+
+					{% endfor %}
+					</ul>
 						
-					</div>
+					
 
 				</div>
 				<div class="col-lg-3">

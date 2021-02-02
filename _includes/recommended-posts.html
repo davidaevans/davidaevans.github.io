@@ -1,0 +1,28 @@
+					<div class="recommendation-head mb-3">You might also like</div>
+					
+					<div class="row">
+
+						{% assign coll = page.collection %}
+
+						{% assign count = 0 %}
+						{% for post in site.[coll] reversed %}
+							{% if count < 3 %}
+								{% if post.url != page.url %}
+						<div class="col-lg-4">
+							<div class="recommendation-title">
+								<a href="{{post.url}}">{{ post.title | capitalize | truncate: 40 }}</a>
+							</div>
+							<div class="recommendation-readtime archive-small archive-faint">
+								<i class="far fa-clock text-right mt-auto"></i> {% include read-time.html content=post.content %}
+							</div>
+							<div class="recommendation-content">
+								<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>
+							</div>
+						</div>
+								{% assign count = count | plus: 1 %}
+								{% endif %}
+							{% endif %}
+						
+						{% endfor %}
+
+					</div>

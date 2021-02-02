@@ -227,7 +227,9 @@ main {
 
 .share-post i {
 	position:static;
-	font-size: 1.2em;
+	font-size: 26px;
+	padding:0;
+	margin:0;
 }
 
 .share-post ul {
@@ -236,6 +238,18 @@ main {
 
 .share-twitter {
 	color:#1da1f2;
+}
+
+.share-facebook {
+	color:#3b5998;
+}
+
+.share-linkedin {
+	color:#0e76a8;
+}
+
+.share-email {
+	color:#000;
 }
 
 

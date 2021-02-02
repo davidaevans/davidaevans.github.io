@@ -225,12 +225,13 @@ main {
 .share-post li {
 	display: inline;
   	list-style-type: none;
-  	padding-right:5px;
+  	padding-right:0px;
+  	width:20%;
 }
 
 .share-post i {
 	position:static;
-	font-size: 26px;
+	font-size: 40px;
 	padding:0;
 	margin:0;
 }

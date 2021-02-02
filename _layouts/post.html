@@ -87,7 +87,11 @@ layout: default
 					<div class="share-post">
 						<p>Share this post via</p>
 						<ul>
-							<li><i class="fab fa-li fa-twitter-square share-twitter"></i></li>
+							<li>
+								<a href="http://twitter.com/share?text={{page.title}}&url={{page.url}}&via={{site.author.twitter-username}}&related={{site.author.twitter-username}}">
+									<i class="fab fa-li fa-twitter-square share-twitter"></i>
+								</a>
+							</li>
 							<li><i class="fab fa-facebook-square share-facebook"></i></li>
 							<li><i class="fab fa-li fa-linkedin share-linkedin"></i></li>
 							<li><i class="fas fa-li fa-envelope-square share-email"></i></li>
